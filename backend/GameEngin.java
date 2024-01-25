@@ -1,7 +1,8 @@
 package backend;
 
 
-import java.util.Stack;
+import java.util.ArrayList;
+import java.util.List;
 
 // import javax.swing.text.Position;
 
@@ -45,12 +46,12 @@ public class GameEngin {
         }
     }
 
-    public Stack<GamePostion> getFreePlaces() {
-        Stack<GamePostion> freePlaces = new Stack<GamePostion>();
+    public List<GamePostion> getFreePlaces() {
+        List<GamePostion> freePlaces = new ArrayList<GamePostion>();
         for (int row = 0; row < 3; row++) {
             for (int col = 0; col < 3; col++) {
                 if (board.getPiece(row, col) == gameShapes.EMPTY) {
-                    freePlaces.push(p);
+                    freePlaces.add(p);
                     // (new GamePostion(row, col))
                 }
             }
